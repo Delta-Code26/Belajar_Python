@@ -1,0 +1,29 @@
+API & Web Development.md
+Artificial Intelligence & Deep Learning.md
+Best Practices dalam Python Programming.md
+Daftar Isi.md
+Data Science & Machine Learning.md
+Database & ORM.md
+Deployment Model AI ke Web & Mobile.md
+Error Handling & Debugging.md
+File Handling.md
+file_name.py
+Fungsi.md
+index.md
+Instalasi.md
+Kontrol Alur Program.md
+List Comprehension.md
+list.txt
+Multi Threading & Async Programming.md
+Pemrograman Berbasis Objek.md
+Pengenalan Python.md
+Program Modular.md
+Python untuk Blockchain & Cryptocurrency.md
+Python untuk Cybersecurity.md
+Python untuk Data Science.md
+Python untuk Game Development.md
+Python untuk Internet of Things (IoT).md
+Python untuk Machine Learning.md
+Python untuk Otomasi.md
+Struktur Data.md
+Variabel dan Tipe Data.md

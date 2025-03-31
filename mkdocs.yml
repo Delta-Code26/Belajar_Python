@@ -1,22 +1,43 @@
-site_name: Belajar Python Bareng Marno
+site_name: Delta_Code.ID
 theme:
   name: material
+
 nav:
   - Beranda: index.md
-  - Modul:
-      - Pengenalan Python: Level 1 - Pengenalan Python.md
-      - Modul 2: Level 2 - Logika dan Kontrol Program.md
-      - Modul 3: Level 3 - Struktur Data.md
-      - Modul 4: Level 4 - Fungsi dan Modularisasi.md
-      - Modul 5: Level 5 - OOP.md
-      # - Modul 5: Level 5 - List, Tuple, dan Set.md
-      - Modul 6: Level 6 - File dan Error Handling.md
-      - Modul 7: Level 7 - Data Analysis.md
-      - Modul 8: Level 8 - GUI dengan Tkinter.md
-      - Modul 9: Level 9 - Python dan Database.md
-      - Modul 10: Level 10 - Website dengan Python.md
-      - Modul 11: Level 11 - Visualisasi dengan Python Style.md
+  - Pemanasan Dulu (Beginner):
+      - Instalasi: Instalasi.md
+      - Variabel dan Tipe Data: Variabel dan Tipe Data.md
+      - Kontrol Alur Program: Kontrol Alur Program.md
+      - Fungsi: Fungsi.md
+      - Struktur Data: Struktur Data.md
+      - File Handling: File Handling.md
+      - Error Handling & Debugging: Error Handling & Debugging.md
 
+  - Level Up Skill (Intermediate):
+      - Program Modular: Program Modular.md
+      - Pemrograman Berbasis Objek: Pemrograman Berbasis Objek.md
+      - Multi Threading & Async Programming: Multi Threading & Async Programming.md
+      - Database & ORM: Database & ORM.md
+      - List Comprehension: List Comprehension.md
+      - Best Practices dalam Python Programming: Best Practices dalam Python Programming.md
+
+  - Level Skill Dewa (Advanced):
+      - API & Web Development: API & Web Development.md
+      - Python untuk Otomasi: Python untuk Otomasi.md
+      - Python untuk Cybersecurity: Python untuk Cybersecurity.md
+      - Python untuk Game Development: Python untuk Game Development.md
+      - Python untuk Internet of Things (IoT): Python untuk Internet of Things (IoT).md
+      - Python untuk Data Science: Python untuk Data Science.md
+      - Data Science & Machine Learning: Data Science & Machine Learning.md
+      - Python untuk Machine Learning: Python untuk Machine Learning.md
+      - Artificial Intelligence & Deep Learning: Artificial Intelligence & Deep Learning.md
+      - Deployment Model AI ke Web & Mobile: Deployment Model AI ke Web & Mobile.md
+      - Python untuk Blockchain & Cryptocurrency: Python untuk Blockchain & Cryptocurrency.md
+
+  - Tips dan Trik:
+      - Best Practices Python: Best Practices dalam Python Programming.md
+      - Tips dan Trik: Tips dan Trik.md
 
 markdown_extensions:
   - attr_list
+  - codehilite  # Tambahkan agar syntax highlight pada kode lebih bagus
