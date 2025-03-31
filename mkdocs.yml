@@ -1,0 +1,22 @@
+site_name: Belajar Python Bareng Marno
+theme:
+  name: material
+nav:
+  - Beranda: index.md
+  - Modul:
+      - Pengenalan Python: Level 1 - Pengenalan Python.md
+      - Modul 2: Level 2 - Logika dan Kontrol Program.md
+      - Modul 3: Level 3 - Struktur Data.md
+      - Modul 4: Level 4 - Fungsi dan Modularisasi.md
+      - Modul 5: Level 5 - OOP.md
+      # - Modul 5: Level 5 - List, Tuple, dan Set.md
+      - Modul 6: Level 6 - File dan Error Handling.md
+      - Modul 7: Level 7 - Data Analysis.md
+      - Modul 8: Level 8 - GUI dengan Tkinter.md
+      - Modul 9: Level 9 - Python dan Database.md
+      - Modul 10: Level 10 - Website dengan Python.md
+      - Modul 11: Level 11 - Visualisasi dengan Python Style.md
+
+
+markdown_extensions:
+  - attr_list
