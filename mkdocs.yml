@@ -20,6 +20,12 @@ nav:
       - Database & ORM: Database & ORM.md
       - List Comprehension: List Comprehension.md
       - Best Practices dalam Python Programming: Best Practices dalam Python Programming.md
+      - Unit Testing dan TTD : Unit Testing dan TTD.md
+      - Environment Management: Environment Management.md
+      - Packaging & Management: Packaging & Management.md
+      - Logging & Monitoring: Logging & Monitoring.md
+      - Security dalam Python Web Dev : Security dalam Python Web Dev.md
+      - Design Pattern: Design Pattern.md
 
   - Level Skill Dewa (Advanced):
       - API & Web Development: API & Web Development.md

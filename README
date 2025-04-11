@@ -1,0 +1,72 @@
+Cara menjalankan / Setup / Start Up
+
+Berikut cara menjalankannya, step by step:
+
+---
+
+### 🧑‍💻 1. **Pastikan MkDocs Terinstal**
+Kalau belum, install dulu MkDocs via pip:
+
+```bash
+pip install mkdocs
+```
+
+Kalau kamu mau tema yang kece kayak Material for MkDocs:
+
+```bash
+pip install mkdocs-material
+```
+
+---
+
+### 📁 2. **Pastikan Struktur Folder Benar**
+Contoh struktur minimalnya:
+
+```
+project/
+│
+├── docs/
+│   └── index.md  ← Ini file markdown yang jadi halaman utama
+│
+└── mkdocs.yml  ← File konfigurasi
+```
+
+---
+
+### 🚀 3. **Jalankan Server Lokal**
+Masuk ke direktori project kamu (yang ada `mkdocs.yml`-nya), lalu jalankan:
+
+```bash
+mkdocs serve
+```
+
+Setelah itu buka browser dan akses:
+
+```
+http://127.0.0.1:8000
+```
+
+Wuhuu~ Dokumentasimu langsung live di situ! Otomatis nge-refresh juga kalau kamu ngedit file Markdown-nya.
+
+---
+
+### 📦 4. **Build Versi Statis (HTML)**
+Kalau kamu mau generate dokumentasi jadi file HTML buat di-upload ke hosting:
+
+```bash
+mkdocs build
+```
+
+Hasilnya bakal ada di folder `site/`.
+
+---
+
+### 💡 Tips Tambahan
+- Kalau mau deploy ke GitHub Pages:  
+  ```bash
+  mkdocs gh-deploy
+  ```
+- Pastikan file `mkdocs.yml` kamu nggak ada error format, karena ini YAML. Indentasi penting!
+
+---
+
