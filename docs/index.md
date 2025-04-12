@@ -5,9 +5,6 @@
 
 ---
 
-![Belajar Python](assets/python.png){ width="30%" }
-
----
 
 ## 🚀 Tentang Proyek Ini
 
@@ -17,7 +14,7 @@ Halo! Ini adalah seri dokumentasi belajar Python khusus buat kamu yang:
 - Penasaran sama Python tapi gak tahu mulai dari mana
 - Suka belajar step-by-step, dari dasar sampai expert
 
-Disusun dengan ❤️ oleh **Marno**, Mahasiswa TI sekaligus pejuang sawit sejati 🌴💻
+Disusun dengan ❤️ oleh **Marno**, Mahasiswa TI ( Teknik Informatika )💻
 
 ---
 
