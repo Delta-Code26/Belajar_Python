@@ -3,7 +3,7 @@ theme:
   name: material
 
 nav:
-  - Beranda: index.md
+  - Beranda: Profile.md
   - Pemula (Beginner):
       - Instalasi: Instalasi.md
       - Variabel dan Tipe Data: Variabel dan Tipe Data.md
