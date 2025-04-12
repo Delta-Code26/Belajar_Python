@@ -30,9 +30,19 @@ Halo! Saya **Marno**, seorang mahasiswa **Teknik Informatika** yang sedang berpe
 
 ## 📚 Misi Hidup
 
-> **"Teknologi bukan hanya tentang kode, tapi solusi. Bahkan untuk pohon sawit."**  
-Saya percaya teknologi bisa menyentuh setiap sudut kehidupan, termasuk dunia perkebunan. Tujuan saya adalah membangun sistem digital yang *down to earth*, dari kebun ke cloud.
+> **"Teknologi bukan hanya tentang kode, tapi solusi."**  
+Saya percaya teknologi bisa menyentuh setiap sudut kehidupan, termasuk dunia perkebunan. Tujuan saya adalah membangun sistem digital yang *down to earth*.
 
+---
+## 📚 REPOSITORY
+
+**Dokumentasi Pemrograman**
+> - JAVA : [JAVA](Java.github)
+> - PYTHON : [PY](Java.github)
+> - PHP : [PHP](Java.github)
+> - JavaScript : [JS](Java.github)
+> - HTML : [HTML](Java.github)
+> - CSS : [CSS](Java.github)
 ---
 
 ## 🌐 Kontak
@@ -42,8 +52,8 @@ Saya percaya teknologi bisa menyentuh setiap sudut kehidupan, termasuk dunia per
 > - 📱 WhatsApp : 0819-9616-7628
 > - 🐙 GitHub : [github.com/Delta-Code26](https://github.com/Delta-Code26)
 > - 🌍 Website : [delta-code.id](https://delta-code.id)
-> - 🌍 Docs Java, Python, HTML, CSS etc : [https://delta-code26.github.io/Docs_Python_DeltaCode/]
+> - 🌍 Repo : [Docs Java, Python, HTML, CSS etc]( https://delta-code26.github.io/Docs_Python_DeltaCode/ )
 
 ---
 
-> Dibuat dengan ❤️, kopi, dan semangat Gen Z 🚀
+> Dibuat dengan ❤️, kopi, dan semangat 45 🚀

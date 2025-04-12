@@ -1,6 +1,6 @@
-# 🔥 **Fungsi di Python**  
+# 🔥 **Function di Python**  
 
-Fungsi adalah **blok kode yang bisa dipanggil kapan saja**, sehingga kode kita lebih **rapi, efisien, dan bisa digunakan ulang**.  
+Function adalah **blok kode yang bisa dipanggil kapan saja**, sehingga kode kita lebih **rapi, efisien, dan bisa digunakan ulang**.  
 
 ---
 

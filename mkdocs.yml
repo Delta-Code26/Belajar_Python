@@ -3,12 +3,13 @@ theme:
   name: material
 
 nav:
-  - Beranda: Profile.md
+  - Beranda: index.md
+  - About Me: Profile.md
   - Pemula (Beginner):
       - Instalasi: Instalasi.md
       - Variabel dan Tipe Data: Variabel dan Tipe Data.md
-      - Kontrol Alur Program: Kontrol Alur Program.md
-      - Fungsi: Fungsi.md
+      - Logika Pemrograman: Logika Pemrograman.md
+      - Function: Function.md
       - Struktur Data: Struktur Data.md
       - File Handling: File Handling.md
       - Error Handling & Debugging: Error Handling & Debugging.md

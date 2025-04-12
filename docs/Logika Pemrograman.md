@@ -1,10 +1,10 @@
-# 🔄 **Kontrol Alur Program di Python**  
+# 🔄 **Logika Pemrograman di Python**  
 
-Sekarang kita masuk ke **logika pemrograman**! Dengan kontrol alur, kita bisa bikin program yang bisa **mengambil keputusan** dan **mengulang tugas secara otomatis**. Let's gooo! 🚀  
+Sekarang kita masuk ke **logika pemrograman**! Dengan logika pemrograman, kita bisa bikin program yang bisa **mengambil keputusan** dan **mengulang tugas secara otomatis**. Let's gooo! 🚀  
 
 ---
 
-## ⚡ **1. If-Else: Logika Kehidupan 😎**  
+## ⚡ **1. If-Else 😎**  
 
 If-Else memungkinkan program buat **mengambil keputusan** berdasarkan kondisi tertentu.  
 

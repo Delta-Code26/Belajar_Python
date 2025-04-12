@@ -22,7 +22,7 @@ Disusun dengan ❤️ oleh **Marno**, Mahasiswa TI ( Teknik Informatika )💻
 
 Kamu bisa langsung klik salah satu modul di sidebar atau pilih dari daftar di bawah:
 
-- [Modul 1 - Pengenalan Python](modul1.md)
+- [Instalasi Python](Instalasi.md)
 - [Modul 2 - Variabel dan Tipe Data](modul2.md)
 - [Modul 3 - Operasi Dasar](modul3.md)
 - [Modul 4 - Percabangan](modul4.md)
