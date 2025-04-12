@@ -1,0 +1,1606 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Database%20%26%20ORM/">
+      
+      
+        <link rel="next" href="../Best%20Practices%20dalam%20Python%20Programming/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.10">
+    
+    
+      
+        <title>List Comprehension - Delta_Code.ID</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pythonic-thinking-menulis-kode-python-seperti-pro" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Delta_Code.ID" class="md-header__button md-logo" aria-label="Delta_Code.ID" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Delta_Code.ID
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              List Comprehension
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Delta_Code.ID" class="md-nav__button md-logo" aria-label="Delta_Code.ID" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Delta_Code.ID
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Beranda
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pemanasan Dulu (Beginner)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pemanasan Dulu (Beginner)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Instalasi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instalasi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Variabel%20dan%20Tipe%20Data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variabel dan Tipe Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Kontrol%20Alur%20Program/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kontrol Alur Program
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Fungsi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fungsi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Struktur%20Data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Struktur Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../File%20Handling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File Handling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Error%20Handling%20%26%20Debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Error Handling & Debugging
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Level Up Skill (Intermediate)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Level Up Skill (Intermediate)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Program%20Modular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Program Modular
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pemrograman%20Berbasis%20Objek/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pemrograman Berbasis Objek
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Multi%20Threading%20%26%20Async%20Programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multi Threading & Async Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Database%20%26%20ORM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database & ORM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    List Comprehension
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    List Comprehension
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-list-comprehension-cara-elegan-buat-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 1. List Comprehension: Cara Elegan Buat List
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 1. List Comprehension: Cara Elegan Buat List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tanpa-list-comprehension-cara-biasa" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Tanpa List Comprehension (Cara Biasa)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dengan-list-comprehension-pythonic" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Dengan List Comprehension (Pythonic 🚀)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-lambda-map-filter-reduce-pemrograman-fungsional-di-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ 2. Lambda, Map, Filter, Reduce: Pemrograman Fungsional di Python
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚡ 2. Lambda, Map, Filter, Reduce: Pemrograman Fungsional di Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lambda-fungsi-anonim" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Lambda (Fungsi Anonim)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-transformasi-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Map (Transformasi List)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter-pilih-elemen-yang-sesuai-kondisi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Filter (Pilih Elemen yang Sesuai Kondisi)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduce-kombinasi-semua-elemen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Reduce (Kombinasi Semua Elemen)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-generator-iterator-menghemat-memori-dengan-lazy-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 3. Generator &amp; Iterator: Menghemat Memori dengan Lazy Evaluation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 3. Generator &amp; Iterator: Menghemat Memori dengan Lazy Evaluation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iterator-struktur-data-yang-bisa-diiterasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Iterator: Struktur Data yang Bisa Diiterasi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generator-iterasi-tanpa-boros-memori" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Generator: Iterasi Tanpa Boros Memori
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kesimpulan" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Kesimpulan
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Best%20Practices%20dalam%20Python%20Programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Best Practices dalam Python Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Unit Testing dan TTD.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unit Testing dan TTD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Environment%20Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Environment Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Packaging%20%26%20Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Packaging & Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Logging%20%26%20Monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logging & Monitoring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Security%20dalam%20Python%20Web%20Dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security dalam Python Web Dev
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Design Pattern.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design Pattern
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Level Skill Dewa (Advanced)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Level Skill Dewa (Advanced)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API%20%26%20Web%20Development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API & Web Development
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python%20untuk%20Otomasi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python untuk Otomasi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python%20untuk%20Cybersecurity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python untuk Cybersecurity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python%20untuk%20Game%20Development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python untuk Game Development
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python%20untuk%20Internet%20of%20Things%20%28IoT%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python untuk Internet of Things (IoT)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python%20untuk%20Data%20Science/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python untuk Data Science
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data%20Science%20%26%20Machine%20Learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Science & Machine Learning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python%20untuk%20Machine%20Learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python untuk Machine Learning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Artificial%20Intelligence%20%26%20Deep%20Learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Artificial Intelligence & Deep Learning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Deployment%20Model%20AI%20ke%20Web%20%26%20Mobile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deployment Model AI ke Web & Mobile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python%20untuk%20Blockchain%20%26%20Cryptocurrency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python untuk Blockchain & Cryptocurrency
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tips dan Trik
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tips dan Trik
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Best%20Practices%20dalam%20Python%20Programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Best Practices dalam Python Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tips dan Trik.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tips dan Trik
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-list-comprehension-cara-elegan-buat-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 1. List Comprehension: Cara Elegan Buat List
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 1. List Comprehension: Cara Elegan Buat List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tanpa-list-comprehension-cara-biasa" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Tanpa List Comprehension (Cara Biasa)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dengan-list-comprehension-pythonic" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Dengan List Comprehension (Pythonic 🚀)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-lambda-map-filter-reduce-pemrograman-fungsional-di-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ 2. Lambda, Map, Filter, Reduce: Pemrograman Fungsional di Python
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚡ 2. Lambda, Map, Filter, Reduce: Pemrograman Fungsional di Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lambda-fungsi-anonim" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Lambda (Fungsi Anonim)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-transformasi-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Map (Transformasi List)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter-pilih-elemen-yang-sesuai-kondisi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Filter (Pilih Elemen yang Sesuai Kondisi)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduce-kombinasi-semua-elemen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Reduce (Kombinasi Semua Elemen)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-generator-iterator-menghemat-memori-dengan-lazy-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 3. Generator &amp; Iterator: Menghemat Memori dengan Lazy Evaluation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 3. Generator &amp; Iterator: Menghemat Memori dengan Lazy Evaluation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iterator-struktur-data-yang-bisa-diiterasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Iterator: Struktur Data yang Bisa Diiterasi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generator-iterasi-tanpa-boros-memori" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Generator: Iterasi Tanpa Boros Memori
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kesimpulan" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Kesimpulan
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="pythonic-thinking-menulis-kode-python-seperti-pro">🧠 <strong>Pythonic Thinking: Menulis Kode Python Seperti Pro</strong></h1>
+<p>Pythonic Thinking adalah cara menulis kode yang <strong>bersih, efisien, dan sesuai standar Python</strong>. Di sini, kita bahas <strong>list comprehension, lambda, map/filter/reduce, serta generator &amp; iterator</strong>.  </p>
+<hr />
+<h2 id="1-list-comprehension-cara-elegan-buat-list">🚀 <strong>1. List Comprehension: Cara Elegan Buat List</strong></h2>
+<p>List comprehension adalah cara <strong>singkat &amp; cepat</strong> buat bikin list baru dari list lama.  </p>
+<h3 id="tanpa-list-comprehension-cara-biasa">🔹 <strong>Tanpa List Comprehension (Cara Biasa)</strong></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">angka</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">kuadrat</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">angka</span><span class="p">:</span>
+    <span class="n">kuadrat</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">kuadrat</span><span class="p">)</span>  <span class="c1"># Output: [1, 4, 9, 16, 25]</span>
+</code></pre></div>
+
+<h3 id="dengan-list-comprehension-pythonic">🔹 <strong>Dengan List Comprehension (Pythonic 🚀)</strong></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">kuadrat</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">angka</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">kuadrat</span><span class="p">)</span>  <span class="c1"># Output: [1, 4, 9, 16, 25]</span>
+</code></pre></div>
+
+<p>📌 <strong>Bisa ditambah kondisi (if statement)!</strong>  </p>
+<div class="codehilite"><pre><span></span><code><span class="n">genap</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">angka</span> <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">genap</span><span class="p">)</span>  <span class="c1"># Output: [2, 4]</span>
+</code></pre></div>
+
+<hr />
+<h2 id="2-lambda-map-filter-reduce-pemrograman-fungsional-di-python">⚡ <strong>2. Lambda, Map, Filter, Reduce: Pemrograman Fungsional di Python</strong></h2>
+<h3 id="lambda-fungsi-anonim">🔹 <strong>Lambda (Fungsi Anonim)</strong></h3>
+<p>Fungsi kecil &amp; cepat yang bisa ditulis dalam satu baris.  </p>
+<div class="codehilite"><pre><span></span><code><span class="n">tambah</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tambah</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>  <span class="c1"># Output: 7</span>
+</code></pre></div>
+
+<h3 id="map-transformasi-list">🔹 <strong>Map (Transformasi List)</strong></h3>
+<p><code>map(fungsi, iterable)</code> → Terapkan fungsi ke setiap elemen dalam list.  </p>
+<div class="codehilite"><pre><span></span><code><span class="n">angka</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">hasil</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">angka</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">hasil</span><span class="p">)</span>  <span class="c1"># Output: [2, 4, 6, 8]</span>
+</code></pre></div>
+
+<h3 id="filter-pilih-elemen-yang-sesuai-kondisi">🔹 <strong>Filter (Pilih Elemen yang Sesuai Kondisi)</strong></h3>
+<p><code>filter(fungsi, iterable)</code> → Pilih elemen yang memenuhi kondisi tertentu.  </p>
+<div class="codehilite"><pre><span></span><code><span class="n">genap</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">angka</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">genap</span><span class="p">)</span>  <span class="c1"># Output: [2, 4]</span>
+</code></pre></div>
+
+<h3 id="reduce-kombinasi-semua-elemen">🔹 <strong>Reduce (Kombinasi Semua Elemen)</strong></h3>
+<p>Gunakan <code>functools.reduce()</code> buat <strong>mengakumulasi nilai dalam list</strong>.  </p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">functools</span><span class="w"> </span><span class="kn">import</span> <span class="n">reduce</span>
+
+<span class="n">total</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">,</span> <span class="n">angka</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>  <span class="c1"># Output: 10 (1+2+3+4)</span>
+</code></pre></div>
+
+<hr />
+<h2 id="3-generator-iterator-menghemat-memori-dengan-lazy-evaluation">🔄 <strong>3. Generator &amp; Iterator: Menghemat Memori dengan Lazy Evaluation</strong></h2>
+<h3 id="iterator-struktur-data-yang-bisa-diiterasi">🔹 <strong>Iterator: Struktur Data yang Bisa Diiterasi</strong></h3>
+<p>List, Tuple, Set, Dictionary semuanya adalah iterator.  </p>
+<div class="codehilite"><pre><span></span><code><span class="n">angka</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>  <span class="c1"># Ubah list jadi iterator</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">angka</span><span class="p">))</span>  <span class="c1"># Output: 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">angka</span><span class="p">))</span>  <span class="c1"># Output: 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">angka</span><span class="p">))</span>  <span class="c1"># Output: 3</span>
+</code></pre></div>
+
+<p>📌 <strong>Kalau <code>next()</code> dipanggil terus &amp; elemen habis, bakal error <code>StopIteration</code>!</strong>  </p>
+<hr />
+<h3 id="generator-iterasi-tanpa-boros-memori">🔹 <strong>Generator: Iterasi Tanpa Boros Memori</strong></h3>
+<p>Generator <strong>mirip function</strong>, tapi pakai <code>yield</code> buat menyimpan state terakhir.  </p>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">angka_generator</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">):</span>
+        <span class="k">yield</span> <span class="n">i</span>  <span class="c1"># Simpan state tiap kali dipanggil</span>
+
+<span class="n">gen</span> <span class="o">=</span> <span class="n">angka_generator</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">gen</span><span class="p">))</span>  <span class="c1"># Output: 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">gen</span><span class="p">))</span>  <span class="c1"># Output: 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">gen</span><span class="p">))</span>  <span class="c1"># Output: 3</span>
+</code></pre></div>
+
+<p>📌 <strong>Keuntungan Generator:</strong><br />
+✅ <strong>Lebih hemat memori</strong> dibandingkan list besar.<br />
+✅ <strong>Cocok buat data streaming atau perhitungan besar.</strong>  </p>
+<hr />
+<h2 id="kesimpulan">🎯 <strong>Kesimpulan</strong></h2>
+<p>✅ <strong>List Comprehension</strong> → Cara cepat bikin list.<br />
+✅ <strong>Lambda, Map, Filter, Reduce</strong> → Teknik pemrograman fungsional.<br />
+✅ <strong>Generator &amp; Iterator</strong> → Menghemat memori dengan lazy evaluation.  </p>
+<p><strong>Next: Multi-threading &amp; Async Programming! 🚀</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

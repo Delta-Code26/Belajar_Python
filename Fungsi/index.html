@@ -1,0 +1,1613 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Kontrol%20Alur%20Program/">
+      
+      
+        <link rel="next" href="../Struktur%20Data/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.10">
+    
+    
+      
+        <title>Fungsi - Delta_Code.ID</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fungsi-di-python" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Delta_Code.ID" class="md-header__button md-logo" aria-label="Delta_Code.ID" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Delta_Code.ID
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fungsi
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Delta_Code.ID" class="md-nav__button md-logo" aria-label="Delta_Code.ID" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Delta_Code.ID
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Beranda
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pemanasan Dulu (Beginner)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pemanasan Dulu (Beginner)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Instalasi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instalasi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Variabel%20dan%20Tipe%20Data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variabel dan Tipe Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Kontrol%20Alur%20Program/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kontrol Alur Program
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Fungsi
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fungsi
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-definisi-pemanggilan-fungsi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 1. Definisi &amp; Pemanggilan Fungsi
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 1. Definisi &amp; Pemanggilan Fungsi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintaks-dasar" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Sintaks Dasar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contoh-fungsi-sederhana" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔥 Contoh: Fungsi Sederhana
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-parameter-return-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 2. Parameter &amp; Return Value
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 2. Parameter &amp; Return Value">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-parameter-input-ke-fungsi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 A. Parameter (Input ke Fungsi)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-return-value-mengembalikan-hasil" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 B. Return Value (Mengembalikan Hasil)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-default-parameter-nilai-bawaan" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 C. Default Parameter (Nilai Bawaan)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-fungsi-bawaan-python-built-in-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ 3. Fungsi Bawaan Python (Built-in Functions)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kesimpulan" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Kesimpulan
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Struktur%20Data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Struktur Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../File%20Handling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File Handling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Error%20Handling%20%26%20Debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Error Handling & Debugging
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Level Up Skill (Intermediate)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Level Up Skill (Intermediate)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Program%20Modular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Program Modular
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pemrograman%20Berbasis%20Objek/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pemrograman Berbasis Objek
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Multi%20Threading%20%26%20Async%20Programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multi Threading & Async Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Database%20%26%20ORM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database & ORM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../List%20Comprehension/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List Comprehension
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Best%20Practices%20dalam%20Python%20Programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Best Practices dalam Python Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Unit Testing dan TTD.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unit Testing dan TTD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Environment%20Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Environment Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Packaging%20%26%20Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Packaging & Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Logging%20%26%20Monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logging & Monitoring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Security%20dalam%20Python%20Web%20Dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security dalam Python Web Dev
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Design Pattern.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design Pattern
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Level Skill Dewa (Advanced)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Level Skill Dewa (Advanced)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API%20%26%20Web%20Development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API & Web Development
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python%20untuk%20Otomasi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python untuk Otomasi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python%20untuk%20Cybersecurity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python untuk Cybersecurity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python%20untuk%20Game%20Development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python untuk Game Development
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python%20untuk%20Internet%20of%20Things%20%28IoT%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python untuk Internet of Things (IoT)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python%20untuk%20Data%20Science/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python untuk Data Science
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data%20Science%20%26%20Machine%20Learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Science & Machine Learning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python%20untuk%20Machine%20Learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python untuk Machine Learning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Artificial%20Intelligence%20%26%20Deep%20Learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Artificial Intelligence & Deep Learning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Deployment%20Model%20AI%20ke%20Web%20%26%20Mobile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deployment Model AI ke Web & Mobile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python%20untuk%20Blockchain%20%26%20Cryptocurrency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python untuk Blockchain & Cryptocurrency
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tips dan Trik
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tips dan Trik
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Best%20Practices%20dalam%20Python%20Programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Best Practices dalam Python Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tips dan Trik.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tips dan Trik
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-definisi-pemanggilan-fungsi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 1. Definisi &amp; Pemanggilan Fungsi
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 1. Definisi &amp; Pemanggilan Fungsi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintaks-dasar" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Sintaks Dasar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contoh-fungsi-sederhana" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔥 Contoh: Fungsi Sederhana
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-parameter-return-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 2. Parameter &amp; Return Value
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 2. Parameter &amp; Return Value">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-parameter-input-ke-fungsi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 A. Parameter (Input ke Fungsi)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-return-value-mengembalikan-hasil" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 B. Return Value (Mengembalikan Hasil)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-default-parameter-nilai-bawaan" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 C. Default Parameter (Nilai Bawaan)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-fungsi-bawaan-python-built-in-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ 3. Fungsi Bawaan Python (Built-in Functions)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kesimpulan" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Kesimpulan
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="fungsi-di-python">🔥 <strong>Fungsi di Python</strong></h1>
+<p>Fungsi adalah <strong>blok kode yang bisa dipanggil kapan saja</strong>, sehingga kode kita lebih <strong>rapi, efisien, dan bisa digunakan ulang</strong>.  </p>
+<hr />
+<h2 id="1-definisi-pemanggilan-fungsi">🎯 <strong>1. Definisi &amp; Pemanggilan Fungsi</strong></h2>
+<p>Kita bisa <strong>mendefinisikan</strong> fungsi sendiri menggunakan <code>def</code>.  </p>
+<h3 id="sintaks-dasar">🔹 <strong>Sintaks Dasar</strong></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">nama_fungsi</span><span class="p">():</span>
+    <span class="c1"># kode di dalam fungsi</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Halo dari dalam fungsi!&quot;</span><span class="p">)</span>
+
+<span class="c1"># Pemanggilan fungsi</span>
+<span class="n">nama_fungsi</span><span class="p">()</span>
+</code></pre></div>
+
+<p>📌 <strong>Tanpa pemanggilan</strong>, fungsi nggak akan jalan!  </p>
+<hr />
+<h3 id="contoh-fungsi-sederhana">🔥 <strong>Contoh: Fungsi Sederhana</strong></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">sapa</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Halo! Selamat datang di Python 🚀&quot;</span><span class="p">)</span>
+
+<span class="n">sapa</span><span class="p">()</span>
+</code></pre></div>
+
+<p>📝 <strong>Output:</strong>  </p>
+<div class="codehilite"><pre><span></span><code>Halo! Selamat datang di Python 🚀
+</code></pre></div>
+
+<hr />
+<h2 id="2-parameter-return-value">🔄 <strong>2. Parameter &amp; Return Value</strong></h2>
+<p>Fungsi bisa menerima <strong>parameter (input)</strong> dan mengembalikan <strong>nilai (return value)</strong>.  </p>
+<h3 id="a-parameter-input-ke-fungsi">🔹 <strong>A. Parameter (Input ke Fungsi)</strong></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">sapa_nama</span><span class="p">(</span><span class="n">nama</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Halo, </span><span class="si">{</span><span class="n">nama</span><span class="si">}</span><span class="s2">! Selamat belajar Python.&quot;</span><span class="p">)</span>
+
+<span class="n">sapa_nama</span><span class="p">(</span><span class="s2">&quot;Adit&quot;</span><span class="p">)</span>
+<span class="n">sapa_nama</span><span class="p">(</span><span class="s2">&quot;Budi&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>📝 <strong>Output:</strong>  </p>
+<div class="codehilite"><pre><span></span><code>Halo, Adit! Selamat belajar Python.  
+Halo, Budi! Selamat belajar Python.  
+</code></pre></div>
+
+<p>📌 <strong>Parameter bisa lebih dari satu</strong>!  </p>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tambah</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hasil: </span><span class="si">{</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">tambah</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># Output: Hasil: 8</span>
+</code></pre></div>
+
+<hr />
+<h3 id="b-return-value-mengembalikan-hasil">🔹 <strong>B. Return Value (Mengembalikan Hasil)</strong></h3>
+<p>Gunakan <code>return</code> kalau mau <strong>mengembalikan nilai</strong> dari fungsi.  </p>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">luas_persegi</span><span class="p">(</span><span class="n">sisi</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">sisi</span> <span class="o">*</span> <span class="n">sisi</span>
+
+<span class="n">hasil</span> <span class="o">=</span> <span class="n">luas_persegi</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Luas persegi: </span><span class="si">{</span><span class="n">hasil</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Output: Luas persegi: 16</span>
+</code></pre></div>
+
+<p>📌 <strong>Keuntungan <code>return</code></strong> → Bisa menyimpan hasil fungsi ke variabel lain.</p>
+<hr />
+<h3 id="c-default-parameter-nilai-bawaan">🔹 <strong>C. Default Parameter (Nilai Bawaan)</strong></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">salam</span><span class="p">(</span><span class="n">nama</span><span class="o">=</span><span class="s2">&quot;User&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Halo, </span><span class="si">{</span><span class="n">nama</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+
+<span class="n">salam</span><span class="p">()</span>         <span class="c1"># Output: Halo, User!</span>
+<span class="n">salam</span><span class="p">(</span><span class="s2">&quot;Rina&quot;</span><span class="p">)</span>   <span class="c1"># Output: Halo, Rina!</span>
+</code></pre></div>
+
+<p>📌 Jika parameter <strong>tidak diberikan</strong>, Python pakai <strong>nilai default</strong>.  </p>
+<hr />
+<h2 id="3-fungsi-bawaan-python-built-in-functions">⚡ <strong>3. Fungsi Bawaan Python (Built-in Functions)</strong></h2>
+<p>Python punya banyak fungsi bawaan yang langsung bisa dipakai!  </p>
+<table>
+<thead>
+<tr>
+<th><strong>Fungsi</strong></th>
+<th><strong>Deskripsi</strong></th>
+<th><strong>Contoh</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>print()</code></td>
+<td>Menampilkan teks</td>
+<td><code>print("Hello!")</code></td>
+</tr>
+<tr>
+<td><code>input()</code></td>
+<td>Menerima input user</td>
+<td><code>nama = input("Masukkan nama: ")</code></td>
+</tr>
+<tr>
+<td><code>len()</code></td>
+<td>Menghitung panjang data</td>
+<td><code>len("Python")  # 6</code></td>
+</tr>
+<tr>
+<td><code>type()</code></td>
+<td>Mengecek tipe data</td>
+<td><code>type(123)  # &lt;class 'int'&gt;</code></td>
+</tr>
+<tr>
+<td><code>int()</code></td>
+<td>Konversi ke integer</td>
+<td><code>int("10")  # 10</code></td>
+</tr>
+<tr>
+<td><code>float()</code></td>
+<td>Konversi ke float</td>
+<td><code>float("3.14")  # 3.14</code></td>
+</tr>
+<tr>
+<td><code>str()</code></td>
+<td>Konversi ke string</td>
+<td><code>str(123)  # "123"</code></td>
+</tr>
+<tr>
+<td><code>abs()</code></td>
+<td>Nilai mutlak</td>
+<td><code>abs(-5)  # 5</code></td>
+</tr>
+<tr>
+<td><code>round()</code></td>
+<td>Pembulatan angka</td>
+<td><code>round(3.6)  # 4</code></td>
+</tr>
+<tr>
+<td><code>max()</code></td>
+<td>Nilai terbesar</td>
+<td><code>max([1, 2, 3])  # 3</code></td>
+</tr>
+<tr>
+<td><code>min()</code></td>
+<td>Nilai terkecil</td>
+<td><code>min([1, 2, 3])  # 1</code></td>
+</tr>
+<tr>
+<td><code>sum()</code></td>
+<td>Menjumlahkan elemen</td>
+<td><code>sum([1, 2, 3])  # 6</code></td>
+</tr>
+</tbody>
+</table>
+<p>📌 <strong>Contoh Penggunaan</strong>  </p>
+<div class="codehilite"><pre><span></span><code><span class="n">angka</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">angka</span><span class="p">))</span>  <span class="c1"># 9</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">angka</span><span class="p">))</span>  <span class="c1"># 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">angka</span><span class="p">))</span>  <span class="c1"># 28</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">angka</span><span class="p">))</span>  <span class="c1"># 5</span>
+</code></pre></div>
+
+<hr />
+<h2 id="kesimpulan">🚀 <strong>Kesimpulan</strong></h2>
+<p>✅ <strong>Fungsi</strong> membantu membuat kode lebih rapi &amp; reusable.<br />
+✅ <strong>Parameter</strong> → Bisa menerima input.<br />
+✅ <strong>Return</strong> → Bisa mengembalikan nilai ke variabel lain.<br />
+✅ <strong>Python punya banyak fungsi bawaan</strong> buat mempermudah coding!  </p>
+<p>Next: <strong>Struktur Data Python (List, Tuple, Dictionary, Set)! 🔥</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
