@@ -4,7 +4,7 @@ theme:
 
 nav:
   - Beranda: index.md
-  - Pemanasan Dulu (Beginner):
+  - Pemula (Beginner):
       - Instalasi: Instalasi.md
       - Variabel dan Tipe Data: Variabel dan Tipe Data.md
       - Kontrol Alur Program: Kontrol Alur Program.md
