@@ -1,5 +1,5 @@
 
-# 👋 Selamat Datang di Modul Belajar Python Delta_Code.id
+# Selamat Datang di Modul Belajar Python Delta_Code.id
 
 > *“Belajar Python, biar hidupmu gak cuma error tapi bisa nge-debug masa depan 😎”*
 
